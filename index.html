@@ -1,56 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coding Quiz</title>
-</head>
-<body>
-    <header><h1 id = "header">Welcome to the Coding Quiz!</h1></header>
-    <p class = "start">Click "start" to start the timed quiz!</p>
-    <button id="start" class ="start" type="button">Start</button>
-    <div id="timer"></div>
-    <div id="first-question">
-        <h2>Which of the following pseudo-classes would you use in CSS to change the class of an element while the mouse is on it?</h2>
-        <button class="answers" class = "first-incorrect">____:active</button>
-        <button class="answers" id = "first-correct">____:hover</button>
-        <button class="answers" class = "first-incorrect">____:focus</button>
-        <button class="answers" class = "first-incorrect">____:not(_)</button>
+    <link rel = "stylesheet" href ="./assets/style.css">
+  </head>
+  <body>
+   
+    <header><h1 id="header">Coding Quiz</h1></header>
+    <p id="rules" class="rules">Rules for the coding quiz... click to start</p>
+    <button class ="start" id="start"><strong>START</strong></button>
+    
+    <div class="timer" id="timer"></div>
+    <div class = "score" id="score"></div>
+
+    <section id="questions" class="questions">
+      <div id="questionOne">
+        <h2>CSS style sheets are read how?</h2> 
+       <button id="correct-answer-one">A) Top to Bottom</button> 
+       <button class="wrong-answer-one">B) Bottom to Top</button>
+       <button class="wrong-answer-one">C) Left to Right</button>
+       <button class="wrong-answer-one">D) Right to Left</button>
+      </div>
+
+      <div id="questionTwo">
+        <h2>JavaScript is a ____-side programming language.</h2>
+        <button class="wrong-answer-two">A) Client</button>
+        <button class="wrong-answer-two">B) Server</button>
+        <button id="correct-answer-two">C) Both A & B</button>
+        <button class="wrong-answer-two">D) None of the above</button>
+      </div>
+
+      <div id="questionThree">
+        <h2>var number = "1" - is stored as what type of variable?</h2>
+        <button class="wrong-answer-three">A) Number</button>
+        <button id="correct-answer-three">B) String</button>
+        <button class="wrong-answer-three">C) Boolean</button>
+        <button class="wrong-answer-three">D) Undefined</button>
+      </div>
+
+      <div id="questionFour">
+        <h2>To add an element to the end of an array you use:</h2>
+        <button class="wrong-answer-four">A) pop()</button>
+        <button class="wrong-answer-four">B) add()</button>
+        <button class="wrong-answer-four">C) slice()</button>
+        <button id="correct-answer-four">D) push()</button>
+      </div>
+
+      <div id="questionFive">
+        <h2>HTML stands for:</h2>
+        <button id="correct-answer-five">HyperText Markup Language</button>
+        <button class="wrong-answer-five">HighTech Markup Language</button>
+        <button class="wrong-answer-five">HighText Machine Language</button>
+        <button class="wrong-answer-five">HeyThere My Lizards</button>
+      </div>
+    </section>
+ 
+    <form id="greatJob">
+      <h3>Great job!</h3>
+      <p>Please enter your initials for high score.</p>
+      <label class="initials">Initials:</label><br>
+      <input type="text"  class="textInitials" id="textInitials">
+      <input type="submit" id="submitButton" class = "submitButton">
+    </form>
+
+    <div class = "gameOver" id="gameOver">
+      <h3>GAME OVER</h3>
+      <p>Replay?</p>
+      <button id ="replay">Try again</a></button>
     </div>
-    <div id="second-question">
-        <h2>Which HTML element contains the text that goes on the tab above the webpage?</h2>
-        <button class="answers" class = "second-incorrect">!DOCTYPE></button>
-        <button class="answers" class = "second-incorrect">body</button>
-        <button class="answers" class = "second-incorrect">div</button>
-        <button class="answers" id = "second-correct">title</button>
-    </div>
-    <div id="third-question">
-        <h2>Which of the following is a way to store groups of data into a single variable?</h2>
-        <button class="answers" id = "third-correct">Arrays</button>
-        <button class="answers" class = "third-incorrect">Functions</button>
-        <button class="answers" class = "third-incorrect">Objects</button>
-        <button class="answers" class = "third-incorrect">Conditional Statements</button>
-    </div>
-    <div id="fourth-question">
-        <h2>How do you halt event bubbling?</h2>
-        <button class="answers" class = "fourth-incorrect">Domain Object Model (DOM)</button>
-        <button class="answers" class = "fourth-incorrect">JSON.parse(<u>Object</u>)</button>
-        <button class="answers" class = "fourth-incorrect">.trim()</button>
-        <button class="answers" id = "fourth-correct">event.stopPropagation</button>
-    </div>
-    <div id = "finished-quiz">
-        <h2>Well Done!</h2>
-        <p>Enter your initials to save your score!</p>
-        <input id="initials" type="text">
-        <button id="submit" type="button">Submit</button>
-        <div id="high-scores"></div>
-    </div>
-    <div id="game-over">
-        <h2>Game Over</h2>
-        <p>Try again?</p>
-        <button id="restart" type="button">Restart</button>
-    </div>
+
     <script src = "./assets/script.js"></script>
-</body>
+  </body>
 </html>
